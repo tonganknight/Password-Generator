@@ -4,6 +4,19 @@ document.getElementById("generate").addEventListener("click",function password()
 
   var lengthChoice =window.prompt("How Long would you like your password to be? Please enter number between 8-128 for your passwords length.")
 
+  //is a number check
+  var wrongway =isNaN(lengthChoice)
+
+  if(wrongway ===true){
+
+    window.alert("That is not a number please try again")
+
+    password()
+    return;
+
+  }
+
+  //valid character length  check
 
   if(lengthChoice <= 7 || lengthChoice >= 129){
 
@@ -13,11 +26,27 @@ document.getElementById("generate").addEventListener("click",function password()
     return;
   }
 
+
+//asking for uppercase option
+
   if(lengthChoice >= 8 && lengthChoice <= 128) {
 
     var upCasecheck =window.prompt("Would you like to include uppercase letters? Y for Yes, N for No.")
 
+    //check if its a letter
+    var x =!isNaN(upCasecheck)
 
+    if(x ===true){
+  
+      window.alert("That is not a valid choice. Please try again")
+  
+      password()
+      return;
+  
+    }
+  
+  
+    //check if its blank
     upCasecheck= upCasecheck.toLowerCase()
 
     if (upCasecheck ==="" || upCasecheck === null){
@@ -34,8 +63,23 @@ document.getElementById("generate").addEventListener("click",function password()
     if(upCasecheck === "n"){
 
       uppercase=false;}
+
+
+  //asking for lower case option
       
     var lowerCasecheck= window.prompt("Would you like to include lowercase letters? Y for yes N for No.")
+
+    //check if its a letter
+    var x =!isNaN(lowerCasecheck)
+
+    if(x ===true){
+  
+      window.alert("That is not a valid choice. Please try again")
+  
+      password()
+      return;
+  
+    }
 
     lowerCasecheck= lowerCasecheck.toLowerCase()
 
@@ -55,8 +99,22 @@ document.getElementById("generate").addEventListener("click",function password()
 
       uppercase=false;}
 
+
+      //asking for number option
     
     var  numCheck=window.prompt("Would you like to password to include numbers? Y for Yes, N for No")
+
+    //check if its a letter
+    var x =!isNaN(numCheck)
+
+    if(x ===true){
+  
+      window.alert("That is not a valid choice. Please try again")
+  
+      password()
+      return;
+  
+    }
 
     numCheck= numCheck.toLowerCase()
 
@@ -79,7 +137,21 @@ document.getElementById("generate").addEventListener("click",function password()
       numbers=false;
     } 
 
-    var symbolCheck =window.prompt("Would you like to include Symbols in your password? Y for Yes N for N")
+    //asking for symbol options
+
+    var symbolCheck =window.prompt("Would you like to include Symbols in your password? Y for Yes N for No")
+
+    //check if its a letter
+    var x =!isNaN(symbolCheck)
+
+    if(x ===true){
+  
+      window.alert("That is not a valid choice. Please try again")
+  
+      password()
+      return;
+  
+    }
 
       symbolCheck= symbolCheck.toLowerCase()
 
@@ -102,6 +174,7 @@ document.getElementById("generate").addEventListener("click",function password()
     }
 
 
+    //validation for user request section
 
     var truestring =[]
 
@@ -138,6 +211,9 @@ document.getElementById("generate").addEventListener("click",function password()
 
         return;}
 
+
+    //password generate section
+
       if(Choice === true){
 
         var charfarm =[]
@@ -170,12 +246,6 @@ document.getElementById("generate").addEventListener("click",function password()
 
           product.push(getpassword);
 
-        
-         
-
-
-
-
          }
 
          document.getElementById("password").placeholder = product.join("")
@@ -186,7 +256,8 @@ document.getElementById("generate").addEventListener("click",function password()
    
       
 
-        }}
+      }}
+      
 });
 
 
