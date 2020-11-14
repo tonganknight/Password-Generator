@@ -65,16 +65,19 @@ document.getElementById("generate").addEventListener("click",function password()
       window.alert("That is not a  valid option. Please start again")
       
       password()
-      return;}
+      return;
+    }
 
 
     if(numCheck === "y"){
 
-      numbers=true;}
+      numbers=true;
+    }
 
     if(numCheck === "n"){
 
-      numbers=false;} 
+      numbers=false;
+    } 
 
     var symbolCheck =window.prompt("Would you like to include Symbols in your password? Y for Yes N for N")
 
@@ -85,38 +88,42 @@ document.getElementById("generate").addEventListener("click",function password()
       window.alert("That is not a  valid option. Please start again")
       
       password()
-      return;}
+      return;
+    }
       
     if(symbolCheck === "y"){
 
-      symbol=true;}
+      symbol=true;
+    }
 
     if(symbolCheck === "n"){
 
-      symbol=false;}
+      symbol=false;
+    }
+
 
 
     var truestring =[]
 
-      truestring.push(lengthChoice +" Characters long")
+      truestring.push(lengthChoice +"Characters long")
 
       if(lowercase === true){
 
-        truestring.push(" Lowercase")}
+        truestring.push("Lowercase")}
 
       if(uppercase === true){
 
-        truestring.push(" Uppercase")
+        truestring.push("Uppercase")
       }
 
       if(numbers === true){
 
-        truestring.push(" Numbers")
+        truestring.push("Numbers")
       }
 
       if(symbol === true){
 
-        truestring.push(" symbols")
+        truestring.push("symbols")
       }
 
       var confirmChoice = truestring.toString()
@@ -155,22 +162,31 @@ document.getElementById("generate").addEventListener("click",function password()
 
         }
 
-        for(i=0; i< lengthChoice; i++)
+        var product = []
 
-          var product =charfarm[Math.floor(Math.random() * lengthChoice +1 )]
+        for(i=0; i< lengthChoice; i++){
 
-        console.log(lengthChoice);
-        console.log(lengthChoice.length);
+          var getpassword =charfarm[Math.floor(Math.random() * charfarm.length)]
+
+          product.push(getpassword);
+
+        
+         
+
+
+
 
          }
 
-         
+         document.getElementById("password").placeholder = product.join("")
  
          
 
-          console.log(product)
-  } 
-    
+          
+   
+      
+
+        }}
 });
 
 
