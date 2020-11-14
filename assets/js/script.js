@@ -157,7 +157,7 @@ document.getElementById("generate").addEventListener("click",function password()
 
         for(i=0; i< lengthChoice; i++)
 
-          var product =charfarm[Math.floor(Math.random() * lengthChoice -8 +1 )]
+          var product =charfarm[Math.floor(Math.random() * lengthChoice +1 )]
 
         console.log(lengthChoice);
         console.log(lengthChoice.length);
