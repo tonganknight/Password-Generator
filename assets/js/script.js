@@ -4,13 +4,6 @@ document.getElementById("generate").addEventListener("click",function password()
 
   var lengthChoice =window.prompt("How Long would you like your password to be? Please enter number between 8-128 for your passwords length.")
 
-  if(typeof lengthChoice === "string"){// go and add this through your choices 
-
-    window.alert("that is a word not a number. Please try agin");
-
-    password();
-    return;
-  }
 
   if(lengthChoice <= 7 || lengthChoice >= 129){
 
@@ -128,10 +121,55 @@ document.getElementById("generate").addEventListener("click",function password()
 
       var confirmChoice = truestring.toString()
 
-    var Choice =window.confirm("Are you sure you would like to add the following to your customer password? " +truestring)
+      var Choice = window.confirm("Are you sure you would like to add the following to your customer password? " +truestring)
 
-      if(choice === true){}
-  }
+      if(Choice === false){
+        
+        window.alert("Okay, lets start agin")
+
+        password()
+
+        return;}
+
+      if(Choice === true){
+
+        var charfarm =[]
+
+        if(lowercase === true){
+
+          charfarm.push("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+        }
+
+        if(uppercase === true){
+
+          charfarm.push("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
+        }
+      
+        if(numbers === true){
+
+          charfarm.push(1,2,3,4,5,6,7,8,9,0)}
+
+        if(symbol === true){
+
+          charfarm.push("!",'"',"#","$","%","&","'","(",")","*","+",",","-",".","/",":","<","=",">","?","@","[","]","^","_","`","{","}","~")
+
+        }
+
+        for(i=0; i< lengthChoice; i++)
+
+          var product =charfarm[Math.floor(Math.random() * lengthChoice -8 +1 )]
+
+        console.log(lengthChoice);
+        console.log(lengthChoice.length);
+
+         }
+
+         
+ 
+         
+
+          console.log(product)
+  } 
     
 });
 
