@@ -15,6 +15,6 @@ Validation
 ------------
 After you have made your selection you will be presented with the selections you have made. You will also be asked if you would lke to use these selections to generate a password
 
-Password Generation
+Password Creation
 ---------------------
 After you have confirmed that your selections are correct. You password will be generated and displayed at the center of the page with in the dotted border. 
