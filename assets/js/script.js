@@ -201,7 +201,7 @@ document.getElementById("generate").addEventListener("click",function password()
 
       var confirmChoice = truestring.toString()
 
-      var Choice = window.confirm("Are you sure you would like to add the following to your customer password? " +truestring)
+      var Choice = window.confirm("Are you sure you would like to add the following to your custom password? " +truestring)
 
       if(Choice === false){
         
@@ -237,6 +237,8 @@ document.getElementById("generate").addEventListener("click",function password()
           charfarm.push("!",'"',"#","$","%","&","'","(",")","*","+",",","-",".","/",":","<","=",">","?","@","[","]","^","_","`","{","}","~")
 
         }
+
+        //execution of password
 
         var product = []
 
